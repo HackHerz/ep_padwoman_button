@@ -26,7 +26,6 @@ exports.postAceInit = (hookName, args) => {
   $('#ep_padwoman_button_span').css({
     'background-image': 'none',
     'width': 'auto',
-    'color': '#666',
     'font-size': '16px',
     'font-weight': '800',
   });
