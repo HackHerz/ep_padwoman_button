@@ -1,7 +1,7 @@
 {
   "name": "ep_padwoman_button",
   "description": "Adds a button to the toolbar that links out to padwoman",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "hackherz (Daniel Stein) <daniel@hackherz.com>",
   "dependencies": {},
   "engines": {
