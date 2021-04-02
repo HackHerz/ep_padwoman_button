@@ -1,15 +1,13 @@
-![Publish Status](https://github.com/ether/ep_button_link/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_button_link/workflows/Backend%20tests/badge.svg)
-
-# Add a button to the toolbar
+# Add a button to the toolbar for padwoman
 
 ## Installation
-1. Install using /admin/plugins or npm install ep_button_link
+1. Install using /admin/plugins or npm install ep_padwoman_button
 2. Edit settings in settings.json
 
 ## Configuration
 Add the following to your settings.json
 ```
-"ep_button_link": { 
+"ep_padwoman_button": { 
   "text": "Hello world",
   "link": "http://whatever.com",
   "classes": "grouped-left",

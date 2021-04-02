@@ -3,53 +3,53 @@
 const settings = require('ep_etherpad-lite/node/utils/Settings');
 
 exports.clientVars = (hook, context, callback) => {
-  let ep_button_link = {};
+  let ep_padwoman_button = {};
   try {
-    if (settings.ep_button_link) {
-      if (!settings.ep_button_link.link) {
-        console.warn('No link set for ep_button_link, add ep_button_link.link to settings.json');
-        ep_button_link.link = 'https://github.com/JohnMcLear/ep_button_link';
+    if (settings.ep_padwoman_button) {
+      if (!settings.ep_padwoman_button.link) {
+        console.warn('No link set for ep_padwoman_button, add ep_padwoman_button.link to settings.json');
+        ep_padwoman_button.link = 'https://github.com/hackherz/ep_padwoman_button';
       } else {
-        ep_button_link.link = settings.ep_button_link.link;
+        ep_padwoman_button.link = settings.ep_padwoman_button.link;
       }
-      if (!settings.ep_button_link.text) {
-        ep_button_link.text = 'NO TEXT SET';
-        console.warn('No text set for ep_button_link, add ep_button_link.text to settings.json');
+      if (!settings.ep_padwoman_button.text) {
+        ep_padwoman_button.text = 'NO TEXT SET';
+        console.warn('No text set for ep_padwoman_button, add ep_padwoman_button.text to settings.json');
       } else {
-        ep_button_link.text = settings.ep_button_link.text;
+        ep_padwoman_button.text = settings.ep_padwoman_button.text;
       }
-      if (!settings.ep_button_link.before) {
-        ep_button_link.before = "[data-key='showTimeSlider']";
-        console.info('No before set for ep_button_link, this may be intentional, ' +
-          'add ep_button_link.before to settings.json');
+      if (!settings.ep_padwoman_button.before) {
+        ep_padwoman_button.before = "[data-key='showTimeSlider']";
+        console.info('No before set for ep_padwoman_button, this may be intentional, ' +
+          'add ep_padwoman_button.before to settings.json');
       } else {
-        ep_button_link.before = settings.ep_button_link.before;
+        ep_padwoman_button.before = settings.ep_padwoman_button.before;
       }
-      if (!settings.ep_button_link.classes) {
-        ep_button_link.classes = 'grouped-left';
-        console.info('No classes set for ep_button_link, this may be intentional, ' +
-        'add ep_button_link.classes to settings.json');
+      if (!settings.ep_padwoman_button.classes) {
+        ep_padwoman_button.classes = 'grouped-left';
+        console.info('No classes set for ep_padwoman_button, this may be intentional, ' +
+        'add ep_padwoman_button.classes to settings.json');
       } else {
-        ep_button_link.classes = settings.ep_button_link.classes;
+        ep_padwoman_button.classes = settings.ep_padwoman_button.classes;
       }
-      if (!settings.ep_button_link.after) {
-        console.info('No after set for ep_button_link, this may be intentional,' +
-        ' add ep_button_link.classes to settings.json');
+      if (!settings.ep_padwoman_button.after) {
+        console.info('No after set for ep_padwoman_button, this may be intentional,' +
+        ' add ep_padwoman_button.classes to settings.json');
       } else {
-        ep_button_link.after = settings.ep_button_link.after;
+        ep_padwoman_button.after = settings.ep_padwoman_button.after;
       }
     } else {
-      console.warn('Set ep_button_link settings in settings.json, example is: "ep_button_link":{ "link" : "https://github.com/JohnMcLear/ep_button", "text": "TEST"}');
-      ep_button_link = {};
-      ep_button_link.link = 'https://github.com/JohnMcLear/ep_button_link';
-      ep_button_link.text = 'NO TEXT SET';
-      ep_button_link.before = '.buttonicon-history';
-      ep_button_link.classes = 'grouped-right';
-      console.warn('No link set for ep_button_link, add ep_button_link.link to settings.json');
-      console.warn('No text set for ep_button_link, add ep_button_link.text to settings.json');
+      console.warn('Set ep_padwoman_button settings in settings.json, example is: "ep_padwoman_button":{ "link" : "https://github.com/hackherz/ep_padwoman_button", "text": "TEST"}');
+      ep_padwoman_button = {};
+      ep_padwoman_button.link = 'https://github.com/hackherz/ep_padwoman_button';
+      ep_padwoman_button.text = 'NO TEXT SET';
+      ep_padwoman_button.before = '.buttonicon-history';
+      ep_padwoman_button.classes = 'grouped-right';
+      console.warn('No link set for ep_padwoman_button, add ep_padwoman_button.link to settings.json');
+      console.warn('No text set for ep_padwoman_button, add ep_padwoman_button.text to settings.json');
     }
   } catch (e) {
     // lovely try catch me if you can
   }
-  return callback({ep_button_link});
+  return callback({ep_padwoman_button});
 };
