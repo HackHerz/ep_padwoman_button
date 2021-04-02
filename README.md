@@ -1,5 +1,7 @@
 # Add a button to the toolbar for padwoman
 
+This is a for of [ep_button_link](https://github.com/ether/ep_button_link).
+
 ## Installation
 1. Install using /admin/plugins or npm install ep_padwoman_button
 2. Edit settings in settings.json
